@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_common: MyString
+  famille_id: 
+  classe: MyString
+  genre: MyString
+  espece: MyString
+  origine_geographique: MyString
+  cycle_biologique: MyString
+  racine: MyString
+  tige: MyString
+  feuillage: MyString
+  fleur: MyString
+  fruit: MyString
+  graine: MyString
+  modes_de_multiplication_possibles: MyString
+  systemes_de_production_adaptes: MyString
+  mise_en_place_de_la_culture: MyString
+  calendrier_cultural: MyString
+  entretien_de_la_culture: MyString
+  exigences_edaphiques_ideales: MyString
+  irrigation: MyString
+  fertilisation: MyString
+  problemes_phytosanitaires_et_protections_adaptees: MyString
+  importance_economique: MyString
+  utilisation: MyString
+  diversification: MyString
+
+two:
+  nom_common: MyString
+  famille_id: 
+  classe: MyString
+  genre: MyString
+  espece: MyString
+  origine_geographique: MyString
+  cycle_biologique: MyString
+  racine: MyString
+  tige: MyString
+  feuillage: MyString
+  fleur: MyString
+  fruit: MyString
+  graine: MyString
+  modes_de_multiplication_possibles: MyString
+  systemes_de_production_adaptes: MyString
+  mise_en_place_de_la_culture: MyString
+  calendrier_cultural: MyString
+  entretien_de_la_culture: MyString
+  exigences_edaphiques_ideales: MyString
+  irrigation: MyString
+  fertilisation: MyString
+  problemes_phytosanitaires_et_protections_adaptees: MyString
+  importance_economique: MyString
+  utilisation: MyString
+  diversification: MyString

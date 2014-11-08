@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108124153) do
+ActiveRecord::Schema.define(version: 20141108131033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,5 +21,37 @@ ActiveRecord::Schema.define(version: 20141108124153) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "vegetaux", force: true do |t|
+    t.string   "nom_common"
+    t.integer  "famille_id"
+    t.string   "classe"
+    t.string   "genre"
+    t.string   "espece"
+    t.string   "origine_geographique"
+    t.string   "cycle_biologique"
+    t.string   "racine"
+    t.string   "tige"
+    t.string   "feuillage"
+    t.string   "fleur"
+    t.string   "fruit"
+    t.string   "graine"
+    t.string   "modes_de_multiplication_possibles"
+    t.string   "systemes_de_production_adaptes"
+    t.string   "mise_en_place_de_la_culture"
+    t.string   "calendrier_cultural"
+    t.string   "entretien_de_la_culture"
+    t.string   "exigences_edaphiques_ideales"
+    t.string   "irrigation"
+    t.string   "fertilisation"
+    t.string   "problemes_phytosanitaires_et_protections_adaptees"
+    t.string   "importance_economique"
+    t.string   "utilisation"
+    t.string   "diversification"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "vegetaux", ["famille_id"], name: "index_vegetaux_on_famille_id", using: :btree
 
 end

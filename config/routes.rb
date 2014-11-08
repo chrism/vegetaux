@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :vegetaux
+
   resources :familles
 
   # The priority is based upon order of creation: first created -> highest priority.
