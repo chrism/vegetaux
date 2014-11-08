@@ -7,9 +7,6 @@
       <th>Nom</th>
       <th>Nom common</th>
       <th>Famille</th>
-      <th>Classe</th>
-      <th>Genre</th>
-      <th>Espece</th>
       <% unless current_user.nil?  %>
         <th colspan="3"></th>
       <% end %>
@@ -23,9 +20,6 @@
         <td><%= vegetable.nom %></td>
         <td><%= vegetable.nom_common %></td>
         <td><%= vegetable.famille.nom %></td>
-        <td><%= vegetable.classe %></td>
-        <td><%= vegetable.genre %></td>
-        <td><%= vegetable.espece %></td>
         <% unless current_user.nil?  %>
           <td><%= link_to 'Show', vegetable %></td>
           <td><%= link_to 'Edit', edit_vegetable_path(vegetable) %></td>

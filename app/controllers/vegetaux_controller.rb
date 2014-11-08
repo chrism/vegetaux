@@ -70,6 +70,6 @@ class VegetauxController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vegetable_params
-      params.require(:vegetable).permit(:photo, :nom_common, :famille_id, :classe, :genre, :espece, :origine_geographique, :cycle_biologique, :racine, :tige, :feuillage, :fleur, :fruit, :graine, :modes_de_multiplication_possibles, :systemes_de_production_adaptes, :mise_en_place_de_la_culture, :calendrier_cultural, :entretien_de_la_culture, :exigences_edaphiques_ideales, :irrigation, :fertilisation, :problemes_phytosanitaires_et_protections_adaptees, :importance_economique, :utilisation, :diversification)
+      params.require(:vegetable).permit(:photo, :nom_common, :famille_id, :classe, :genre, :espece, :origine_geographique, :cycle_biologique, :racine, :tige, :feuillage, :fleur, :fruit, :graine, :modes_de_multiplication_possibles, :systemes_de_production_adaptes, :mise_en_place_de_la_culture, :calendrier_cultural, :entretien_de_la_culture, :exigences_climatiques, :exigences_edaphiques_ideales, :irrigation, :fertilisation, :problemes_phytosanitaires_et_protections_adaptees, :importance_economique, :utilisation, :diversification)
     end
 end
