@@ -77,3 +77,13 @@ html, body {
 #flash_error {
   @extend %flash-error;
 }
+
+.table-image {
+  width: 110px;
+}
+
+.table-admin {
+  text-align: right;
+  width: 160px;
+  white-space: nowrap;
+}
