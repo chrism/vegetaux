@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Nom</th>
       <th>Nom common</th>
       <th>Famille</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @vegetaux.each do |vegetable| %>
       <tr>
+        <td><%= image_tag vegetable.photo.url(:thumb) %></td>
         <td><%= vegetable.nom %></td>
         <td><%= vegetable.nom_common %></td>
         <td><%= vegetable.famille.nom %></td>
