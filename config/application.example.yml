@@ -1,0 +1,11 @@
+# Rename this to application.yml and use your own details
+
+LOGIN_NAME: 
+PASSWORD: 
+
+DEVELOPMENT_KEY_BASE: 
+TEST_KEY_BASE: 
+
+S3_BUCKET_NAME: 
+S3_KEY: 
+S3_SECRET: 
