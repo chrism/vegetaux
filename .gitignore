@@ -18,8 +18,5 @@
 # Ignore application configuration
 /config/application.yml
 
-# Secrets too
-/config/secrets.yml
-
 # OSX
 .DS_Store
