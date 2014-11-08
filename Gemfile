@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.1"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -6,7 +7,14 @@ gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# PROCESSES
+gem 'foreman', '~> 0.75.0'
 
+# SERVER
+gem 'unicorn', '~> 4.8.3'
+
+# HEROKU
+gem 'rails_12factor', group: :production
 
 gem 'paperclip', '~> 4.2.0'
 gem 'aws-sdk', '~> 1.58.0'
