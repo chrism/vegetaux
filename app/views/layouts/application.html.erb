@@ -29,7 +29,12 @@
         <%= link_to "Sign In", sign_in_path, class: "sign-in-link", remote: true %>
       <% end %>
     </p>
-    <p>Reconnaissance des végétaux</p>
+
+    <% if signed_in? %>
+      <p><%= link_to "Familles", familles_path %> | <%= link_to "Vegetaux", vegetaux_path %></p>
+    <% else %>
+      <p>Reconnaissance des végétaux</p>
+    <% end %>
   </div>
 
 </footer>

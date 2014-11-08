@@ -31,7 +31,7 @@ html, body {
 .main-content {
   @include outer-container();
   min-height: 100%;
-  padding-top: 20px;
+  padding: 20px 0;
   margin-bottom: -60px;
 
 }
@@ -86,4 +86,8 @@ html, body {
   text-align: right;
   width: 160px;
   white-space: nowrap;
+}
+
+.field {
+  padding: 10px 0;
 }
