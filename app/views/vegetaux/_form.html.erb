@@ -16,8 +16,8 @@
     <%= f.text_field :nom_common %>
   </div>
   <div class="field">
-    <%= f.label :famille_id %><br>
-    <%= f.text_field :famille_id %>
+    <%= f.label :famille_id %>
+    <%= collection_select(:vegetable, :famille_id, Famille.all, :id, :nom, prompt: true) %>
   </div>
   <div class="field">
     <%= f.label :classe %><br>

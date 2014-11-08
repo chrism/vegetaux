@@ -3,31 +3,12 @@
 <table>
   <thead>
     <tr>
+      <th>Nom</th>
       <th>Nom common</th>
       <th>Famille</th>
       <th>Classe</th>
       <th>Genre</th>
       <th>Espece</th>
-      <th>Origine geographique</th>
-      <th>Cycle biologique</th>
-      <th>Racine</th>
-      <th>Tige</th>
-      <th>Feuillage</th>
-      <th>Fleur</th>
-      <th>Fruit</th>
-      <th>Graine</th>
-      <th>Modes de multiplication possibles</th>
-      <th>Systemes de production adaptes</th>
-      <th>Mise en place de la culture</th>
-      <th>Calendrier cultural</th>
-      <th>Entretien de la culture</th>
-      <th>Exigences edaphiques ideales</th>
-      <th>Irrigation</th>
-      <th>Fertilisation</th>
-      <th>Problemes phytosanitaires et protections adaptees</th>
-      <th>Importance economique</th>
-      <th>Utilisation</th>
-      <th>Diversification</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -35,31 +16,12 @@
   <tbody>
     <% @vegetaux.each do |vegetable| %>
       <tr>
+        <td><%= vegetable.nom %></td>
         <td><%= vegetable.nom_common %></td>
-        <td><%= vegetable.famille %></td>
+        <td><%= vegetable.famille.nom %></td>
         <td><%= vegetable.classe %></td>
         <td><%= vegetable.genre %></td>
         <td><%= vegetable.espece %></td>
-        <td><%= vegetable.origine_geographique %></td>
-        <td><%= vegetable.cycle_biologique %></td>
-        <td><%= vegetable.racine %></td>
-        <td><%= vegetable.tige %></td>
-        <td><%= vegetable.feuillage %></td>
-        <td><%= vegetable.fleur %></td>
-        <td><%= vegetable.fruit %></td>
-        <td><%= vegetable.graine %></td>
-        <td><%= vegetable.modes_de_multiplication_possibles %></td>
-        <td><%= vegetable.systemes_de_production_adaptes %></td>
-        <td><%= vegetable.mise_en_place_de_la_culture %></td>
-        <td><%= vegetable.calendrier_cultural %></td>
-        <td><%= vegetable.entretien_de_la_culture %></td>
-        <td><%= vegetable.exigences_edaphiques_ideales %></td>
-        <td><%= vegetable.irrigation %></td>
-        <td><%= vegetable.fertilisation %></td>
-        <td><%= vegetable.problemes_phytosanitaires_et_protections_adaptees %></td>
-        <td><%= vegetable.importance_economique %></td>
-        <td><%= vegetable.utilisation %></td>
-        <td><%= vegetable.diversification %></td>
         <td><%= link_to 'Show', vegetable %></td>
         <td><%= link_to 'Edit', edit_vegetable_path(vegetable) %></td>
         <td><%= link_to 'Destroy', vegetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
