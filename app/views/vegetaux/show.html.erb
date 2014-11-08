@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<p><%= image_tag @vegetable.photo.url(:medium) %></p>
+
 <p>
   <strong>Nom common:</strong>
   <%= @vegetable.nom_common %>
@@ -130,5 +132,5 @@
   <%= @vegetable.diversification %>
 </p>
 
-<%= link_to 'Edit', edit_vegetable_path(@vegetable) %> |
-<%= link_to 'Back', vegetaux_path %>
+<%= link_to 'Edit', edit_vegetable_path(@vegetable), :class => 'button' %> |
+<%= link_to 'Back to list', vegetaux_path, :class => 'button' %>
