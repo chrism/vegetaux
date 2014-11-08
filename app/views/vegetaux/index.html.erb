@@ -5,7 +5,7 @@
     <tr>
       <th>Image</th>
       <th>Nom</th>
-      <th>Nom common</th>
+      <th>Nom commun</th>
       <th>Famille</th>
       <% unless current_user.nil?  %>
         <th colspan="3"></th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= image_tag vegetable.photo.url(:thumb) %></td>
         <td><%= vegetable.nom %></td>
-        <td><%= vegetable.nom_common %></td>
+        <td><%= vegetable.nom_commun %></td>
         <td><%= vegetable.famille.nom %></td>
         <% unless current_user.nil?  %>
           <td><%= link_to 'Show', vegetable %></td>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108190747) do
+ActiveRecord::Schema.define(version: 20141108195903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20141108190747) do
   end
 
   create_table "vegetaux", force: true do |t|
-    t.string   "nom_common"
+    t.string   "nom_commun"
     t.integer  "famille_id"
     t.string   "classe"
     t.string   "genre"
