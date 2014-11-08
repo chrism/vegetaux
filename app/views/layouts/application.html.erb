@@ -8,7 +8,31 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="modal-window">
+  <p>Something here</p>
+</div>
+<div id="modal-window-bg"></div>
+
+<div class="main-content">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", :class => "flash" %>
+  <% end %>
+  <%= yield %>
+</div>
+
+<footer class="site-footer">
+  <div class="content">
+    <p class="authentication-link">
+      <% if signed_in? %>
+        <%= link_to "Sign Out", sign_out_path %>
+      <% else %>
+        <%= link_to "Sign In", sign_in_path, class: "sign-in-link", remote: true %>
+      <% end %>
+    </p>
+    <p>Reconnaissance des végétaux</p>
+  </div>
+
+</footer>
 
 </body>
 </html>

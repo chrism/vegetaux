@@ -1,0 +1,11 @@
+<section class="sign-in">
+    <button type="button" class="sign-in-close">×</button>
+    <h1>Sign In</h1>
+    <div class="form-content">
+      <%= form_tag sessions_path do %>
+        <%= text_field_tag :login, params[:login], placeholder: :login, class: "form-input" %>
+        <%= password_field_tag :password, params[:password], placeholder: :password, class: "form-input password" %>
+        <%= submit_tag "Sign In", class: 'submit-button' %>
+      <% end %>
+    </div>
+</section>

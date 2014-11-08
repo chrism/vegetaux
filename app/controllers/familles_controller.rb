@@ -1,4 +1,5 @@
 class FamillesController < ApplicationController
+  before_filter :authorize, only: [:new, :edit, :update, :destroy]
   before_action :set_famille, only: [:show, :edit, :update, :destroy]
 
   # GET /familles

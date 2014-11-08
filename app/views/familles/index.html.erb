@@ -4,7 +4,9 @@
   <thead>
     <tr>
       <th>Nom</th>
-      <th colspan="3"></th>
+      <% unless current_user.nil?  %>
+        <th colspan="3"></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -12,9 +14,11 @@
     <% @familles.each do |famille| %>
       <tr>
         <td><%= famille.nom %></td>
-        <td><%= link_to 'Show', famille %></td>
-        <td><%= link_to 'Edit', edit_famille_path(famille) %></td>
-        <td><%= link_to 'Destroy', famille, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% unless current_user.nil?  %>
+          <td><%= link_to 'Show', famille %></td>
+          <td><%= link_to 'Edit', edit_famille_path(famille) %></td>
+          <td><%= link_to 'Destroy', famille, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Famille', new_famille_path %>
+<% unless current_user.nil?  %>
+  <%= link_to 'New Famille', new_famille_path, :class => "button" %>
+<% end %>

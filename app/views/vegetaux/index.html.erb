@@ -10,7 +10,9 @@
       <th>Classe</th>
       <th>Genre</th>
       <th>Espece</th>
-      <th colspan="3"></th>
+      <% unless current_user.nil?  %>
+        <th colspan="3"></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -24,9 +26,11 @@
         <td><%= vegetable.classe %></td>
         <td><%= vegetable.genre %></td>
         <td><%= vegetable.espece %></td>
-        <td><%= link_to 'Show', vegetable %></td>
-        <td><%= link_to 'Edit', edit_vegetable_path(vegetable) %></td>
-        <td><%= link_to 'Destroy', vegetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% unless current_user.nil?  %>
+          <td><%= link_to 'Show', vegetable %></td>
+          <td><%= link_to 'Edit', edit_vegetable_path(vegetable) %></td>
+          <td><%= link_to 'Destroy', vegetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +38,6 @@
 
 <br>
 
-<%= link_to 'New Vegetable', new_vegetable_path %>
+<% unless current_user.nil?  %>
+  <%= link_to 'New Vegetable', new_vegetable_path, :class => "button" %>
+<% end %>

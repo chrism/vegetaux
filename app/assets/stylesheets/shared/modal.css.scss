@@ -1,0 +1,35 @@
+#modal-window {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: block;
+  background: white;
+  z-index: 9001;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 50px black;
+  padding: 50px;
+  border-radius: 10px;
+
+  .sign-in-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    background: transparent;
+    font-size: 2em;
+    padding: 0;
+    outline: 0;
+  }
+}
+
+#modal-window-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparentize(black, 0.2);
+  z-index: 9000;
+}

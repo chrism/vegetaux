@@ -1,4 +1,5 @@
 class VegetauxController < ApplicationController
+  before_filter :authorize, only: [:new, :edit, :update, :destroy]
   before_action :set_vegetable, only: [:show, :edit, :update, :destroy]
 
   # GET /vegetaux
