@@ -14,6 +14,7 @@ gem 'unicorn', '~> 4.8.3'
 
 # HEROKU
 gem 'rails_12factor', group: :production
+gem 'newrelic_rpm', '~> 3.9.5.251'
 
 gem 'paperclip', '~> 4.2.0'
 gem 'aws-sdk', '~> 1.58.0'
