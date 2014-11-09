@@ -20,8 +20,9 @@ gem 'paperclip', '~> 4.2.0'
 gem 'aws-sdk', '~> 1.58.0'
 
 gem 'bourbon', '~> 3.2.1'
-gem 'neat', '~> 1.5.1' 
+gem 'neat', '~> 1.5.1'
 
+gem 'nexter', '~> 0.0.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

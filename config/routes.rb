@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'viewer#index'
+
+  get 'viewer/:id' => 'viewer#show', as: :viewer
+
   resources :sessions
 
   resources :vegetaux

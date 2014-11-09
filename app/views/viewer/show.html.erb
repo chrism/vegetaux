@@ -1,0 +1,10 @@
+<h1><%= @vegetable.nom %></h1>
+
+<% unless @previous.nil? %>
+  <p><%= link_to "Previous", viewer_path(@previous.id) %></p>
+<% end %>
+
+<% unless @next.nil? %>
+  <p><%= link_to "Next", viewer_path(@next.id) %></p>
+<% end %>
+

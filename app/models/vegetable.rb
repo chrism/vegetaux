@@ -14,4 +14,5 @@ class Vegetable < ActiveRecord::Base
   def nom
     "#{famille.nom} #{genre} #{espece}"
   end
+
 end
