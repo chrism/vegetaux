@@ -1,10 +1,10 @@
 <h1><%= @vegetable.nom %></h1>
 
 <% unless @previous.nil? %>
-  <p><%= link_to "Previous", viewer_path(@previous.id) %></p>
+  <p><%= link_to "Previous", viewer_path(@previous.id), data: { keybinding: 'left' } %></p>
 <% end %>
 
 <% unless @next.nil? %>
-  <p><%= link_to "Next", viewer_path(@next.id) %></p>
+  <p><%= link_to "Next", viewer_path(@next.id), data: { keybinding: 'right' } %></p>
 <% end %>
 
