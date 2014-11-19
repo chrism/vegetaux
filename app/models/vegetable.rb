@@ -15,7 +15,17 @@ class Vegetable < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   def nom
-    [famille.nom, genre, espece].join(" ")
+    full = []
+
+    full << famille.nom unless famille.nom.nil?
+    full << genre unless genre.nil?
+    full << espece unless espece.nil?
+
+    if full.any?
+      full.join(" ")
+    else
+      ""
+    end
   end
 
   def famille_chosen
