@@ -9,7 +9,9 @@
 
 <p>
   <strong>Famille:</strong>
-  <%= @vegetable.famille.nom %>
+  <% unless @vegetable.famille.nil? %>
+    <%= @vegetable.famille.nom %>
+  <% end %>
 </p>
 
 <p>

@@ -17,7 +17,7 @@ class Vegetable < ActiveRecord::Base
   def nom
     full = []
 
-    full << famille.nom unless famille.nom.nil?
+    full << famille.nom unless famille.nil?
     full << genre unless genre.nil?
     full << espece unless espece.nil?
 
