@@ -1,10 +1,73 @@
-<h1><%= @vegetable.nom %></h1>
+<% @botaniques = [
+  { label: "Origine géographique – milieu naturel", content: @vegetable.origine_geographique },
+  { label: "Cycle biologique", content: @vegetable.cycle_biologique },
+  { label: "Racine", content: @vegetable.racine },
+  { label: "Tige", content: @vegetable.tige },
+  { label: "Feuillage", content: @vegetable.feuillage },
+  { label: "Fleur", content: @vegetable.fleur },
+  { label: "Fruit", content: @vegetable.fruit },
+  { label: "Graine", content: @vegetable.graine }
+] %>
 
-<% unless @previous.nil? %>
-  <p><%= link_to "Previous", viewer_path(@previous.id), data: { keybinding: 'left' } %></p>
-<% end %>
+<% @techniques = [
+  { label: "Modes de multiplication possibles", content: @vegetable.modes_de_multiplication_possibles },
+  { label: "Systèmes de productions adaptés", content: @vegetable.systemes_de_production_adaptes },
+  { label: "Mise en place de la culture", content: @vegetable.mise_en_place_de_la_culture },
+  { label: "Calendrier cultural", content: @vegetable.calendrier_cultural },
+  { label: "Entretien de la culture", content: @vegetable.entretien_de_la_culture },
+  { label: "Exigences climatiques", content: @vegetable.exigences_climatiques },
+  { label: "Exigences édaphiques (idéales)", content: @vegetable.exigences_edaphiques_ideales },
+  { label: "Irrigation", content: @vegetable.irrigation },
+  { label: "Fertilisation", content: @vegetable.fertilisation },
+  { label: "Problèmes phytosanitaires et protections adaptées", content: @vegetable.problemes_phytosanitaires_et_protections_adaptees },
+  { label: "Importance économique", content: @vegetable.importance_economique },
+  { label: "Utilisation", content: @vegetable.utilisation },
+  { label: "Diversification (variétés, cultivars…)", content: @vegetable.diversification } 
+] %>
 
-<% unless @next.nil? %>
-  <p><%= link_to "Next", viewer_path(@next.id), data: { keybinding: 'right' } %></p>
-<% end %>
+<section class="viewer-header">
+  <div class="main-image"><%= image_tag @vegetable.photo.url(:medium) %></div>
+  <div class="main-heading">
+    <h1><%= @vegetable.nom %></h1>
+    <h4>or</h4>
+    <h2><%= @vegetable.nom_commun %></h2>
+  </div>
+</section>
+
+<section class="viewer-content">
+  <h2>Caractéristiques Botaniques</h2>
+  <ul>
+    <%= render partial: "list_item", collection: @botaniques %>
+  </ul>
+</section>
+
+<section class="viewer-content">
+  <h2>Caractéristiques Techniques et Culturales</h2>
+  <ul>
+    <%= render partial: "list_item", collection: @techniques %>
+  </ul>
+</section>
+
+<section class="navigation">
+  <div class="nav-link previous">
+    <% unless @previous.nil? %>
+      <h3><%= link_to "← Previous", viewer_path(@previous.id), data: { keybinding: 'left' } %></h3>
+    <% else %>
+      <h3><%= link_to "← Last", viewer_path(@last.id), data: { keybinding: 'left' } %></h3>
+    <% end %>
+  </div>
+
+  <div class="nav-link next">
+    <% unless @next.nil? %>
+      <h3><%= link_to "Next →", viewer_path(@next.id), data: { keybinding: 'right' } %></h3>
+    <% else %>
+      <h3><%= link_to "First →", viewer_path(@first.id), data: { keybinding: 'right' } %></h3>
+    <% end %>
+  </div>
+</section>
+
+<div class="help">
+  <p>You can also press the &larr; &amp; &rarr; keys to navigate.</p>
+</div>
+
 

@@ -21,19 +21,6 @@ $(document).ready(function() {
   $("#modal-window").hide();
   $("#modal-window-bg").hide();
 
-  var menu = $('.centered-navigation-menu');
-  var menuToggle = $('.centered-navigation-menu-button');
-  var signUp = $('.sign-up');
-
-  $(menuToggle).on('click', function(e) {
-    e.preventDefault();
-    menu.slideToggle(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
-      }
-    });
-  });
-
   $(document).delegate('.sign-in-link', 'ajax:success', function(event, data, status, xhr) {
     $("#modal-window-bg").fadeIn();
     $("#modal-window").fadeIn();
@@ -41,7 +28,7 @@ $(document).ready(function() {
     $("#login").focus();
   });
 
-  $(document).delegate('.sign-in-close', 'click', function() {
+  $(document).delegate('.modal-close', 'click', function() {
     $("#modal-window-bg").fadeOut();
     $("#modal-window").fadeOut();
   });

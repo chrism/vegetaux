@@ -1,3 +1,74 @@
-// Place all the styles related to the viewer controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.viewer-header {
+  @include display(flex);
+  @include align-items(center);
+  width: 100%;
+  margin-bottom: 2em;
+
+  .main-image {
+    img {
+      max-height: 500px;
+      width: auto;
+    }
+  }
+
+  .main-heading {
+    @include flex(1);
+    text-align: center;
+    padding: 0 1em;
+  }
+}
+
+.viewer-content {
+  margin-bottom: 2em;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    border: 1px solid $light-gray;
+    
+    li {
+      border-bottom: 1px solid $light-gray;
+      width: 100%;
+      @include display(flex);
+
+      span {
+        display: block;
+        padding: 1em;
+      }
+      span.item-label {
+        width: 30%;
+        border-right: 1px solid $light-gray;
+      }
+
+      span.item-content {
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.navigation {
+  overflow: hidden;
+
+  .nav-link {
+    display: block;
+
+    &.previous {
+      float: left;
+    }
+    &.next {
+      text-align: right;
+      float: right;
+    }
+  }
+}
+
+.help {
+  text-align: center;
+}

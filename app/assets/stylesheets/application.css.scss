@@ -21,6 +21,8 @@
 
 @import 'shared/modal';
 
+@import 'viewer';
+
 body {
   margin: 0;
 }
@@ -48,7 +50,7 @@ html, body {
 
 .site-footer {
   padding: 1em;
-  border-top: 1px solid black;
+  border-top: 1px solid $light-gray;
   .content {
     @include outer-container();
 

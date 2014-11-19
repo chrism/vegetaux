@@ -6,6 +6,10 @@ class ViewerController < ApplicationController
     nexter = Nexter.wrap( Vegetable.all, @vegetable )
     @previous = nexter.previous
     @next = nexter.next
+
+    @first = @vegetable
+    @last = Vegetable.last
+
     render 'show'
   end
 
@@ -13,6 +17,9 @@ class ViewerController < ApplicationController
     nexter = Nexter.wrap( Vegetable.all, @vegetable )
     @previous = nexter.previous
     @next = nexter.next
+
+    @first = Vegetable.first
+    @last = Vegetable.last
   end
 
   private
