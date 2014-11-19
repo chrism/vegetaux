@@ -15,7 +15,7 @@ class Vegetable < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   def nom
-    "#{famille.nom} #{genre} #{espece}"
+    [famille.nom, genre, espece].join(" ")
   end
 
   def famille_chosen
