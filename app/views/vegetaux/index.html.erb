@@ -6,7 +6,7 @@
     <% @vegetaux.each do |vegetable| %>
       <tr>
         <td class="table-image"><%= image_tag vegetable.photo.url(:thumb) %></td>
-        <td class="table-nom"><%= vegetable.nom %></td>
+
         <td class="table-nom-commun"><%= vegetable.nom_commun %></td>
         <% unless current_user.nil?  %>
           <td class="table-admin"><%= link_to 'Show', vegetable %> | <%= link_to 'Edit', edit_vegetable_path(vegetable) %> | <%= link_to 'Destroy', vegetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
