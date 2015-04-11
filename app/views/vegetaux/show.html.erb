@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Vegetable', new_vegetable_path, :class => "button" %>
+
+<br>
+<br>
+
 <p><%= image_tag @vegetable.photo.url(:medium) %></p>
 
 <p>
@@ -135,4 +140,5 @@
 </p>
 
 <%= link_to 'Edit', edit_vegetable_path(@vegetable), :class => 'button' %> |
-<%= link_to 'Back to list', vegetaux_path, :class => 'button' %>
+<%= link_to 'Back to list', vegetaux_path, :class => 'button' %> |
+<%= link_to 'New Vegetable', new_vegetable_path, :class => "button" %>
