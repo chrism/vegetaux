@@ -1,4 +1,8 @@
 <h1>Listing familles</h1>
+<br>
+<% unless current_user.nil?  %>
+  <%= link_to 'New Famille', new_famille_path, :class => "button" %>
+<% end %>
 
 <table>
   <tbody>
