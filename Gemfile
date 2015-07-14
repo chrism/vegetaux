@@ -26,6 +26,10 @@ gem 'nexter', '~> 0.0.5'
 
 gem 'mousetrap-rails', '~> 1.4.6'
 
+# PDF
+gem 'prawn'
+gem 'prawn-table'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

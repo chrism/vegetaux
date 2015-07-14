@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'viewer#index'
 
+  get 'viewer/print' => 'viewer#print', as: :print_version
   get 'viewer/:id' => 'viewer#show', as: :viewer
 
   resources :sessions

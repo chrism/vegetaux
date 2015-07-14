@@ -121,7 +121,12 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pdf-core (0.5.1)
     pg (0.17.1)
+    prawn (2.0.1)
+      pdf-core (~> 0.5.1)
+      ttfunk (~> 1.4.0)
+    prawn-table (0.2.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -184,6 +189,7 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
+    ttfunk (1.4.0)
     turbolinks (2.5.1)
       coffee-rails
     tzinfo (1.2.2)
@@ -215,6 +221,8 @@ DEPENDENCIES
   nexter (~> 0.0.5)
   paperclip (~> 4.2.0)
   pg
+  prawn
+  prawn-table
   pry-byebug
   rails (= 4.1.6)
   rails_12factor

@@ -22,6 +22,20 @@ class ViewerController < ApplicationController
     @last = Vegetable.last
   end
 
+  def print
+    @vegetaux = Vegetable.all
+
+    #puts @vegetaux.inspect
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = PrintPdf.new(@vegetaux)
+        send_data pdf.render, filename: "vegetaux.pdf", type: "application/pdf", disposition: "inline"
+      end
+    end
+  end
+
   private
 
     def set_vegetable

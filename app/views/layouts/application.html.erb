@@ -31,9 +31,9 @@
     </p>
 
     <% if signed_in? %>
-      <p><%= link_to "Viewer", root_path %> | <%= link_to "Familles", familles_path %> | <%= link_to "Vegetaux", vegetaux_path %></p>
+      <p><%= link_to "Viewer", root_path %> | <%= link_to "Familles", familles_path %> | <%= link_to "Vegetaux", vegetaux_path %> | <%= link_to "Print Version", print_version_path(format: "pdf") %></p>
     <% else %>
-      <p><%= link_to "Reconnaissance des végétaux", root_path %></p>
+      <p><%= link_to "Reconnaissance des végétaux", root_path %> | <%= link_to "Print Version", print_version_path(format: "pdf") %></p>
     <% end %>
   </div>
 
